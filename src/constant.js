@@ -1,0 +1,1 @@
+export const API_HOST = 'https://x8ki-letl-twmt.n7.xano.io/api:n2wGC7P0'
