@@ -8,6 +8,7 @@ const createItem = (article, templateElement) => {
   const role = newItem.querySelector('[data-element="role"]');
   const description = newItem.querySelector('[data-element="description"]');
   const contentType = newItem.querySelector('[data-element="content-type"]');
+  const articleLink = newItem.querySelector('[data-element="article-link"]');
 
   // Populate inner elements
   if (image) image.src = article?.featuredImage?.url || '';
@@ -17,6 +18,9 @@ const createItem = (article, templateElement) => {
   if (contentType) {
     contentType.textContent = article.content_type;
     contentType.style.display = "none"
+  }
+  if (articleLink) {
+    articleLink.href = `articles/common?id=${article.id}`;
   }
 
   return newItem;
